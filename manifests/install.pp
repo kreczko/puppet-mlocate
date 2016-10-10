@@ -31,7 +31,7 @@ class mlocate::install (
     path    => $update_command,
     owner   => 'root',
     group   => 'root',
-    mode    => '0555',
+    mode    => '0700',
     source  => "puppet:///modules/${module_name}/mlocate.cron",
     require => File['updatedb.conf'],
   }
