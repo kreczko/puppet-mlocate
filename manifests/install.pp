@@ -36,11 +36,6 @@ class mlocate::install (
     require => File['updatedb.conf'],
   }
 
-  file { $cron_daily_path:
-    ensure  => absent,
-    require => Package['mlocate'],
-  }
-
   if $update_on_install == true {
     exec { $update_command:
       refreshonly => true,

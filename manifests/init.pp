@@ -115,6 +115,5 @@ class mlocate (
 
   anchor { 'mlocate::begin': } ->
     class { 'mlocate::install': } ->
-    class { 'mlocate::cron': } ->
   anchor { 'mlocate::end': }
 }
